@@ -22,3 +22,11 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+
+// Імпортуємо встановлений npm-пакет
+import validator from 'validator';
+
+// Виводимо результати перевірки прямо в консоль браузера
+console.log("=== Перевірка роботи пакету validator ===");
+console.log("Перевірка правильного email (test@gmail.com):", validator.isEmail('test@gmail.com'));
+console.log("Перевірка неправильного email (просто текст):", validator.isEmail('просто текст'));
